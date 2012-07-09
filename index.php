@@ -9,10 +9,4 @@ if($DB->get_num_rows()){
 } else {
     $users = array();
 }
-?>
-<h1>Пользователи</h1>
-<?
-foreach ($users as $user) {
-    echo '<p>'.$user['name'].'</p>';
-}
-?>
+include 'index.php.html';
