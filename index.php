@@ -1,5 +1,6 @@
 <?php
 require_once 'DBConnector.php';
+require_once 'User.php';
 require_once 'UserRepository.php';
 
 $user_repository = new UserRepository(new DBConnector);

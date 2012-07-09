@@ -13,7 +13,7 @@ class UserRepository
         $this->db_connector->query("SELECT * FROM users LIMIT {$limit}");
         if($this->db_connector->get_num_rows()){
             while($user = $this->db_connector->fetch_row()){
-                $users[] = $user;
+                $users[] = new User($user);
             }
         } else {
             $users = array();
